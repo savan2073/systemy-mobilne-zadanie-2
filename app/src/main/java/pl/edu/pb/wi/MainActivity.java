@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView questionTextView;
 
 
+
     private Question[] questions = new Question[] {
       new Question(R.string.q_1, true),
       new Question(R.string.q_2, false),
