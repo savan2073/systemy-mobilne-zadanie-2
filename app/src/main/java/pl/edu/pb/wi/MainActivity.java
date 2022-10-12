@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView questionTextView;
 
 
-
     private Question[] questions = new Question[] {
       new Question(R.string.q_1, true),
       new Question(R.string.q_2, false),
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         falseButton = findViewById(R.id.false_button);
         nextButton = findViewById(R.id.next_button);
         questionTextView = findViewById(R.id.question_text_view);
+
 
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
