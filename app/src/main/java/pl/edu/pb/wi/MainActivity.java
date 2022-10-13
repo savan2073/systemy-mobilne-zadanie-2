@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         trueButton = findViewById(R.id.true_button);
         falseButton = findViewById(R.id.false_button);
         nextButton = findViewById(R.id.next_button);
+        promptButton = findViewById(R.id.prompt_button);
         questionTextView = findViewById(R.id.question_text_view);
 
 
