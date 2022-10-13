@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Quiz</string>
-    <string name="button_true">True</string>
-    <string name="button_false">False</string>
-    <string name="button_next">Next</string>
+    <string name="button_true">Prawda</string>
+    <string name="button_false">Fałsz</string>
+    <string name="button_next">Następny</string>
+    <string name="button_prompt">Podpowiedź</string>
+    <string name="button_show_answer">Pokaż odpowiedź</string>
     <string name="q_1">Activity jest jednym z komponentów aplikacji Android</string>
     <string name="q_2">Android 8 jest najnowszą wersją systemu Android</string>
     <string name="q_3">Aplikacje dla systemu Android są sterowane zdarzeniowo</string>

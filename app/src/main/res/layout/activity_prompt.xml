@@ -16,18 +16,18 @@
         android:text="Czy na pewno chcesz zobaczyć odpowiedź?"/>
 
     <Button
-        android:id="@+id/next_button"
+        android:id="@+id/show_answer_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/gray"
         android:textColor="@color/black"
-        android:text="Pokaż odpowiedź" />
+        android:text="@string/button_show_answer" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="30dp"
         android:textColor="@color/black"
-        android:text="Odpowiedz"/>
+        tools:text="Odpowiedz"/>
 
 
 

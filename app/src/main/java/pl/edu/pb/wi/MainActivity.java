@@ -13,10 +13,12 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private static final String KEY_CURRENT_INDEX = "currentIndex";
     private static final String QUIZ_TAG = "MainActivity";
+    public static final String KEY_EXTRA_ANSWER = "pl.edu.pb.wi.quiz.correctAnswer";
 
     private Button trueButton;
     private Button falseButton;
     private Button nextButton;
+    private Button promptButton;
     private TextView questionTextView;
 
 
@@ -62,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 currentIndex=(currentIndex+1)%questions.length;
                 setNextQuestion();
+            }
+        });
+        promptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
         setNextQuestion();
