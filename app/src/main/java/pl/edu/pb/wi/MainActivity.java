@@ -3,6 +3,7 @@ package pl.edu.pb.wi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -69,7 +70,10 @@ public class MainActivity extends AppCompatActivity {
         promptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this,PromptActivity.class);
+                boolean correctAnswer = questions[currentIndex].isTrueAnswer();
+                intent.putExtra(KEY_EXTRA_ANSWER,correctAnswer);
+                startActivity(intent);
             }
         });
         setNextQuestion();
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d(QUIZ_TAG,"Wywołano onStart");
     }
 
     @Override
