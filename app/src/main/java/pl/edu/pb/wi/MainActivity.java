@@ -1,14 +1,19 @@
 package pl.edu.pb.wi;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String KEY_CURRENT_INDEX = "currentIndex";
+    private static final String QUIZ_TAG = "MainActivity";
+
     private Button trueButton;
     private Button falseButton;
     private Button nextButton;
@@ -27,7 +32,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(QUIZ_TAG,"Wywołano onCreate");
         setContentView(R.layout.activity_main);
+
+        if(savedInstanceState != null){
+            currentIndex = savedInstanceState.getInt(KEY_CURRENT_INDEX);
+        }
 
         trueButton = findViewById(R.id.true_button);
         falseButton = findViewById(R.id.false_button);
@@ -55,6 +65,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         setNextQuestion();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(QUIZ_TAG,"Wywołano onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(QUIZ_TAG,"Wywołano onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(QUIZ_TAG,"Wywołano onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(QUIZ_TAG,"Wywołano onDestroy");
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(QUIZ_TAG, "Wywołano onSaveInstanceState");
+        outState.putInt(KEY_CURRENT_INDEX,currentIndex);
     }
 
     private void checkAnswerCorrectness(boolean userAnswer) {
