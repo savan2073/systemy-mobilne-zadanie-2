@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
                 checkAnswerCorrectness(false);
             }
         });
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                currentIndex=(currentIndex+1)%questions.length;
+                setNextQuestion();
+            }
+        });
+        setNextQuestion();
     }
 
     private void checkAnswerCorrectness(boolean userAnswer) {
@@ -62,15 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void setNextQuestion() {
         questionTextView.setText(questions[currentIndex].getQuestionId());
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                currentIndex = (currentIndex + 1)%questions.length;
-                setNextQuestion();
-            }
-        });
-        setNextQuestion();
     }
 }
 
