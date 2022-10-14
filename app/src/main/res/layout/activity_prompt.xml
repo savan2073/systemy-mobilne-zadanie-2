@@ -29,6 +29,13 @@
         android:padding="30dp"
         android:textColor="@color/black"
         tools:text="Odpowiedz"/>
+    <Button
+        android:id="@+id/return_main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:textColor="@color/black"
+        android:text="@string/button_return_main"/>
 
 
 
