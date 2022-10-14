@@ -42,6 +42,7 @@ public class PromptActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PromptActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
